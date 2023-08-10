@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <textarea id="myEditor"></textarea>
+
+    <script>
+        let editor = CodeMirror.fromTextArea(document.getElementById("myEditor"), {
+            lineNumbers: true,
+            mode: "javascript",
+            theme: "default"
+        });
+        // 에디터의 현재 내용 가져오기
+        let content = editor.getValue();
+
+        // 에디터의 내용 설정하기
+        editor.setValue("console.log('Hello, CodeMirror!');");
+    </script>
+</body>
+</html>
